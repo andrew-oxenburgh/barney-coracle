@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View, SafeAreaView } from "react-native";
 
 function BoardComponent({ children }) {
    return (
@@ -28,7 +28,7 @@ function CellComponent({ children }) {
 
 export default function Main() {
    return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
          <StatusBar
             animated={true}
             backgroundColor="#61dafb"
@@ -41,43 +41,43 @@ export default function Main() {
          <BoardComponent>
             <RowComponent>
                <CellComponent>
-                  a
+                  <Text>a</Text>
                </CellComponent>
                <CellComponent>
-                  b
+                  <Text>b</Text>
                </CellComponent>
                <CellComponent>
-                  c
+                  <Text>c</Text>
                </CellComponent>
                <CellComponent>
-                  d
+                  <Text>d</Text>
                </CellComponent>
                <CellComponent>
-                  e
+                  <Text>e</Text>
                </CellComponent>
             </RowComponent>
             <RowComponent>
                <CellComponent>
-                  a2
+                  <Text>a2</Text>
                </CellComponent>
                <CellComponent>
-                  b2
+                  <Text>b2</Text>
                </CellComponent>
                <CellComponent>
-                  c2
+                  <Text>c2</Text>
                </CellComponent>
                <CellComponent>
-                  d2
+                  <Text>d2</Text>
                </CellComponent>
                <CellComponent>
-                  e2
+                  <Text>e2</Text>
                </CellComponent>
             </RowComponent>
          </BoardComponent>
          <TouchableOpacity onPress={() => alert("Hello, world!")} style={styles.button}>
             <Text style={styles.buttonText}>Pick a photo</Text>
          </TouchableOpacity>
-      </View>
+      </SafeAreaView>
    );
 }
 
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
       color: 'black',
       fontFamily: 'sans-serif',
       fontSize: 32,
-      fontWeight: 'bolder',
+      fontWeight: 'bold',
       backgroundColor: "white",
       alignItems: "center",
       height: 60,
@@ -112,7 +112,8 @@ const styles = StyleSheet.create({
    container: {
       backgroundColor: "#fff",
       alignItems: "center",
-      justifyContent: "center"
+      justifyContent: "center",
+      flex: 1,
    },
    logo: {
       width: 305,
