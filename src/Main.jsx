@@ -5,11 +5,17 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 export default function Main() {
    return (
       <View style={styles.container}>
-         <Text>Open up App.js to start working on Fighting Corracles!</Text>
-         <StatusBar style="auto"/>
+         <StatusBar
+            animated={true}
+            backgroundColor="#61dafb"
+            barStyle="default"
+            translucent={true}
+            showHideTransition="fade"
+            hidden={false}
+         />
          <Image source={{uri: 'https://i.imgur.com/TkIrScD.png'}} style={styles.logo}/>
          <Text style={styles.instructions}>
-            To share a photo from your phone with a friend, just press the button below!
+            To share a photo from your phone with a friend, just press the button below!!!!
          </Text>
          <TouchableOpacity onPress={() => alert('Hello, world!')} style={styles.button}>
             <Text style={styles.buttonText}>Pick a photo</Text>
