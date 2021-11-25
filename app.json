@@ -1,10 +1,11 @@
 {
   "expo": {
-    "name": "barney-corracle",
+    "name": "Barney coracle",
     "slug": "barney-corracle",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+     "description": "a fun little demo app",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",

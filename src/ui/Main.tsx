@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View, SafeAreaView } from "react-native";
 
-function BoardComponent({ children }) {
+function BoardComponent({ children }): React.ReactElement<View> {
    return (
       <View style={styles.board}>
          {children}
@@ -10,7 +10,7 @@ function BoardComponent({ children }) {
    );
 }
 
-function RowComponent({ children }) {
+function RowComponent({ children }): React.ReactElement<View>  {
    return (
       <View style={styles.row} >
          {children}
@@ -18,7 +18,7 @@ function RowComponent({ children }) {
    );
 }
 
-function CellComponent({ children }) {
+function CellComponent({ children }): React.ReactElement<View>  {
    return (
       <View style={styles.cell}>
          {children}
@@ -26,15 +26,13 @@ function CellComponent({ children }) {
    );
 }
 
-export default function Main() {
+export default function Main(): React.ReactElement<View>  {
    return (
       <SafeAreaView style={styles.container}>
          <StatusBar
             animated={true}
             backgroundColor="#61dafb"
-            barStyle="default"
             translucent={true}
-            showHideTransition="fade"
             hidden={false}
          />
          <Text style={styles.button}>Barney Corracle</Text>
