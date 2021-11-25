@@ -94,12 +94,20 @@ const styles = StyleSheet.create({
       flexDirection: "row",
    },
    cell: {
-      backgroundColor: "green",
+      color: 'black',
+      fontFamily: 'sans-serif',
+      fontSize: 32,
+      fontWeight: 'bolder',
+      backgroundColor: "white",
       alignItems: "center",
-      width: 20,
+      height: 60,
+      width: 60,
       justifyContent: "center",
       padding: 20,
-      margin: 5
+      margin: 5,
+      borderColor: 'red',
+      borderStyle: 'solid',
+      borderWidth: 2,
    },
    container: {
       backgroundColor: "#fff",
