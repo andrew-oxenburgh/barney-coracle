@@ -1,45 +1,6 @@
 import * as R from 'ramda'
 
-type Rank = string
-type File = number
-
-interface PlayerCellView {
-   occupiedByMe: false
-   occupiedByThem: false
-   bombedByMe: false
-   bombedByThem: false
-}
-
-interface Cell {
-   rank: Rank
-   file: File
-   playerA: PlayerCellView | {}
-   playerB: PlayerCellView | {}
-}
-
-interface Game {
-   game: Cell[][]
-}
-
-const game = [
-   [
-      {
-         rank: 'a',
-         file: 1,
-         playerA: {},
-         playerB: {},
-      },
-   ],
-]
-
-enum PLAYER_ID {
-   A = 'A',
-   B = 'B',
-}
-
-export default {
-   createGame,
-}
+import { Cell, Game } from './game.model'
 
 function createCell(rankNum: number, fileNum: number): Cell {
    return {
@@ -56,4 +17,8 @@ export function createGame(rankNum: number, fileNum: number): Game {
          return createCell(rankCursor, fileCursor)
       })
    })
+}
+
+export default {
+   createGame,
 }
