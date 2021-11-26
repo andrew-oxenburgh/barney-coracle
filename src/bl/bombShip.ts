@@ -1,4 +1,4 @@
-import { Board, PLAYER_ID, Position, Result } from "./game.model";
+import { Board, PLAYER_ID, Position, Result } from './game.model'
 
 export function bombShip(
    player: PLAYER_ID,
