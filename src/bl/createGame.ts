@@ -4,10 +4,22 @@ import { Cell, Game } from './game.model'
 
 function createCell(rankNum: number, fileNum: number): Cell {
    return {
-      rank: String.fromCharCode(97 + rankNum - 1) as string,
+      rank: rankNum,
       file: fileNum,
-      playerA: {},
-      playerB: {},
+      players: [
+         {
+            occupiedByMe: false,
+            occupiedByThem: false,
+            bombedByMe: false,
+            bombedByThem: false
+         },
+         {
+            occupiedByMe: false,
+            occupiedByThem: false,
+            bombedByMe: false,
+            bombedByThem: false
+         }
+      ]
    }
 }
 

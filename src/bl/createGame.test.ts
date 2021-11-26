@@ -1,18 +1,25 @@
-import { createGame } from './createGame'
+import { createGame } from "./createGame";
 
-describe('createGame', () => {
-   test('1 x 1', () => {
-      let expected = [[{ rank: 'a', file: 1, playerA: {}, playerB: {} }]]
-      let actual = createGame(1, 1)
+const emptyCell = {
+   occupiedByMe: false,
+   occupiedByThem: false,
+   bombedByMe: false,
+   bombedByThem: false
+};
 
-      expect(actual).toStrictEqual(expected)
-   })
-   test('2 x 1', () => {
+describe("createGame", () => {
+   test("1 x 1", () => {
+      let expected = [[{ rank: 1, file: 1, players: [emptyCell, emptyCell] }]];
+      let actual = createGame(1, 1);
+
+      expect(actual).toStrictEqual(expected);
+   });
+   test("2 x 1", () => {
       let expected = [
          [
-            { rank: 'a', file: 1, playerA: {}, playerB: {} },
-            { rank: 'b', file: 1, playerA: {}, playerB: {} },
-         ],
+            { rank: 1, file: 1, players: [emptyCell, emptyCell] },
+            { rank: 2, file: 1, players: [emptyCell, emptyCell] }
+         ]
       ]
       let actual = createGame(2, 1)
 
@@ -22,13 +29,13 @@ describe('createGame', () => {
    test('2 x 2', () => {
       let expected = [
          [
-            { rank: 'a', file: 1, playerA: {}, playerB: {} },
-            { rank: 'b', file: 1, playerA: {}, playerB: {} },
+            { rank: 1, file: 1, players: [emptyCell, emptyCell] },
+            { rank: 2, file: 1, players: [emptyCell, emptyCell] }
          ],
          [
-            { rank: 'a', file: 2, playerA: {}, playerB: {} },
-            { rank: 'b', file: 2, playerA: {}, playerB: {} },
-         ],
+            { rank: 1, file: 2, players: [emptyCell, emptyCell] },
+            { rank: 2, file: 2, players: [emptyCell, emptyCell] }
+         ]
       ]
       let actual = createGame(2, 2)
 
@@ -38,17 +45,17 @@ describe('createGame', () => {
    test('2 x 3', () => {
       let expected = [
          [
-            { rank: 'a', file: 1, playerA: {}, playerB: {} },
-            { rank: 'b', file: 1, playerA: {}, playerB: {} },
+            { rank: 1, file: 1, players: [emptyCell, emptyCell] },
+            { rank: 2, file: 1, players: [emptyCell, emptyCell] }
          ],
          [
-            { rank: 'a', file: 2, playerA: {}, playerB: {} },
-            { rank: 'b', file: 2, playerA: {}, playerB: {} },
+            { rank: 1, file: 2, players: [emptyCell, emptyCell] },
+            { rank: 2, file: 2, players: [emptyCell, emptyCell] }
          ],
          [
-            { rank: 'a', file: 3, playerA: {}, playerB: {} },
-            { rank: 'b', file: 3, playerA: {}, playerB: {} },
-         ],
+            { rank: 1, file: 3, players: [emptyCell, emptyCell] },
+            { rank: 2, file: 3, players: [emptyCell, emptyCell] }
+         ]
       ]
       let actual = createGame(2, 3)
 
