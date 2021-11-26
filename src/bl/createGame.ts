@@ -1,25 +1,25 @@
 import * as R from "ramda";
 
+type Rank = string;
+type File = number;
+
 interface PlayerCellView {
-  occupiedByMe: boolean;
+  occupiedByMe: false;
   occupiedByThem: false;
   bombedByMe: false;
   bombedByThem: false;
 }
 
 interface Cell {
-  rank: number;
-  file: string;
-  playerA: PlayerCellView;
-  playerB: PlayerCellView;
+  rank: Rank;
+  file: File;
+  playerA: PlayerCellView | {};
+  playerB: PlayerCellView | {};
 }
 
 interface Game {
   game: Cell[][];
 }
-
-type Rank = string;
-type File = number;
 
 const game = [
   [
@@ -41,9 +41,9 @@ export default {
   createGame,
 };
 
-function createCell(rankNum: number, fileNum: number) {
+function createCell(rankNum: number, fileNum: number): Cell {
   return {
-    rank: String.fromCharCode(97 + rankNum - 1),
+    rank: String.fromCharCode(97 + rankNum - 1) as string,
     file: fileNum,
     playerA: {},
     playerB: {},
