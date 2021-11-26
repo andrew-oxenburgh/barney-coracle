@@ -1,25 +1,25 @@
-import { createGame } from "./createGame";
+import { createGame } from './createGame'
 
 const emptyCell = {
    occupiedByMe: false,
    occupiedByThem: false,
    bombedByMe: false,
-   bombedByThem: false
-};
+   bombedByThem: false,
+}
 
-describe("createGame", () => {
-   test("1 x 1", () => {
-      let expected = [[{ rank: 1, file: 1, players: [emptyCell, emptyCell] }]];
-      let actual = createGame(1, 1);
+describe('createGame', () => {
+   test('1 x 1', () => {
+      let expected = [[{ rank: 1, file: 1, players: [emptyCell, emptyCell] }]]
+      let actual = createGame(1, 1)
 
-      expect(actual).toStrictEqual(expected);
-   });
-   test("2 x 1", () => {
+      expect(actual).toStrictEqual(expected)
+   })
+   test('2 x 1', () => {
       let expected = [
          [
             { rank: 1, file: 1, players: [emptyCell, emptyCell] },
-            { rank: 2, file: 1, players: [emptyCell, emptyCell] }
-         ]
+            { rank: 2, file: 1, players: [emptyCell, emptyCell] },
+         ],
       ]
       let actual = createGame(2, 1)
 
@@ -30,12 +30,12 @@ describe("createGame", () => {
       let expected = [
          [
             { rank: 1, file: 1, players: [emptyCell, emptyCell] },
-            { rank: 2, file: 1, players: [emptyCell, emptyCell] }
+            { rank: 2, file: 1, players: [emptyCell, emptyCell] },
          ],
          [
             { rank: 1, file: 2, players: [emptyCell, emptyCell] },
-            { rank: 2, file: 2, players: [emptyCell, emptyCell] }
-         ]
+            { rank: 2, file: 2, players: [emptyCell, emptyCell] },
+         ],
       ]
       let actual = createGame(2, 2)
 
@@ -46,16 +46,16 @@ describe("createGame", () => {
       let expected = [
          [
             { rank: 1, file: 1, players: [emptyCell, emptyCell] },
-            { rank: 2, file: 1, players: [emptyCell, emptyCell] }
+            { rank: 2, file: 1, players: [emptyCell, emptyCell] },
          ],
          [
             { rank: 1, file: 2, players: [emptyCell, emptyCell] },
-            { rank: 2, file: 2, players: [emptyCell, emptyCell] }
+            { rank: 2, file: 2, players: [emptyCell, emptyCell] },
          ],
          [
             { rank: 1, file: 3, players: [emptyCell, emptyCell] },
-            { rank: 2, file: 3, players: [emptyCell, emptyCell] }
-         ]
+            { rank: 2, file: 3, players: [emptyCell, emptyCell] },
+         ],
       ]
       let actual = createGame(2, 3)
 

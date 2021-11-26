@@ -11,15 +11,15 @@ function createCell(rankNum: number, fileNum: number): Cell {
             occupiedByMe: false,
             occupiedByThem: false,
             bombedByMe: false,
-            bombedByThem: false
+            bombedByThem: false,
          },
          {
             occupiedByMe: false,
             occupiedByThem: false,
             bombedByMe: false,
-            bombedByThem: false
-         }
-      ]
+            bombedByThem: false,
+         },
+      ],
    }
 }
 
