@@ -51,9 +51,9 @@ function createCell(rankNum: number, fileNum: number): Cell {
 }
 
 export function createGame(rankNum: number, fileNum: number): Game {
-   return R.range(1, fileNum + 1).map((fileCursor) => {
-     return R.range(1, rankNum + 1).map((rankCursor) => {
-        return createCell(rankCursor, fileCursor);
-     });
+  return R.range(1, fileNum + 1).map((fileCursor) => {
+    return R.range(1, rankNum + 1).map((rankCursor) => {
+      return createCell(rankCursor, fileCursor);
+    });
   });
 }
