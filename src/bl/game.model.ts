@@ -19,22 +19,16 @@ export interface Cell {
    players: [PlayerCellView | {}, PlayerCellView | {}]
 }
 
-export interface Game {
+export interface Board {
    game: Cell[][]
 }
-
-export const game = [
-   [
-      {
-         rank: 'a',
-         file: 1,
-         playerA: {},
-         playerB: {},
-      },
-   ],
-]
 
 export enum PLAYER_ID {
    A = 0,
    B = 1,
+}
+
+export enum Result {
+   HIT,
+   MISS,
 }

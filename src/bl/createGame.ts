@@ -1,6 +1,6 @@
 import * as R from 'ramda'
 
-import { Cell, Game } from './game.model'
+import { Cell, Board } from './game.model'
 
 function createCell(rankNum: number, fileNum: number): Cell {
    return {
@@ -23,7 +23,7 @@ function createCell(rankNum: number, fileNum: number): Cell {
    }
 }
 
-export function createGame(rankNum: number, fileNum: number): Game {
+export function createGame(rankNum: number, fileNum: number): Board {
    return R.range(1, fileNum + 1).map((fileCursor) => {
       return R.range(1, rankNum + 1).map((rankCursor) => {
          return createCell(rankCursor, fileCursor)
