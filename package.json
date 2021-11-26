@@ -9,7 +9,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "eslint",
-    "prettier": "prettier src/**/*.* --write --ignore-unknown",
+    "prettier": "prettier src/**/*.* --write --ignore-unknown --",
     "eject": "expo eject",
      "postinstall": "husky install",
      "prepublishOnly": "pinst --disable",

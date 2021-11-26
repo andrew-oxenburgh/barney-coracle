@@ -11,8 +11,8 @@ describe("createGame", () => {
     let expected = [
       [
         { rank: "a", file: 1, playerA: {}, playerB: {} },
-        { rank: "b", file: 1, playerA: {}, playerB: {} }
-      ]
+        { rank: "b", file: 1, playerA: {}, playerB: {} },
+      ],
     ];
     let actual = createGame(2, 1);
 
@@ -23,12 +23,12 @@ describe("createGame", () => {
     let expected = [
       [
         { rank: "a", file: 1, playerA: {}, playerB: {} },
-        { rank: "b", file: 1, playerA: {}, playerB: {} }
+        { rank: "b", file: 1, playerA: {}, playerB: {} },
       ],
       [
         { rank: "a", file: 2, playerA: {}, playerB: {} },
-        { rank: "b", file: 2, playerA: {}, playerB: {} }
-      ]
+        { rank: "b", file: 2, playerA: {}, playerB: {} },
+      ],
     ];
     let actual = createGame(2, 2);
 
@@ -39,16 +39,16 @@ describe("createGame", () => {
     let expected = [
       [
         { rank: "a", file: 1, playerA: {}, playerB: {} },
-        { rank: "b", file: 1, playerA: {}, playerB: {} }
+        { rank: "b", file: 1, playerA: {}, playerB: {} },
       ],
       [
         { rank: "a", file: 2, playerA: {}, playerB: {} },
-        { rank: "b", file: 2, playerA: {}, playerB: {} }
+        { rank: "b", file: 2, playerA: {}, playerB: {} },
       ],
       [
         { rank: "a", file: 3, playerA: {}, playerB: {} },
-        { rank: "b", file: 3, playerA: {}, playerB: {} }
-      ]
+        { rank: "b", file: 3, playerA: {}, playerB: {} },
+      ],
     ];
     let actual = createGame(2, 3);
 

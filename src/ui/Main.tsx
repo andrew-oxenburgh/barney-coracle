@@ -5,7 +5,7 @@ import {
   Text,
   TouchableOpacity,
   View,
-  SafeAreaView
+  SafeAreaView,
 } from "react-native";
 
 function BoardComponent({ children }): React.ReactElement<View> {
@@ -80,13 +80,13 @@ const styles = StyleSheet.create({
   board: {
     width: "100%",
     display: "flex",
-    flexWrap: "nowrap"
+    flexWrap: "nowrap",
   },
   row: {
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    flexDirection: "row"
+    flexDirection: "row",
   },
   cell: {
     color: "black",
@@ -102,32 +102,32 @@ const styles = StyleSheet.create({
     margin: 5,
     borderColor: "red",
     borderStyle: "solid",
-    borderWidth: 2
+    borderWidth: 2,
   },
   container: {
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    flex: 1
+    flex: 1,
   },
   logo: {
     width: 305,
     height: 159,
-    marginBottom: 20
+    marginBottom: 20,
   },
   instructions: {
     color: "#888",
     fontSize: 18,
     marginHorizontal: 15,
-    marginBottom: 10
+    marginBottom: 10,
   },
   button: {
     backgroundColor: "blue",
     padding: 20,
-    borderRadius: 30
+    borderRadius: 30,
   },
   buttonText: {
     fontSize: 20,
-    color: "#fff"
-  }
+    color: "#fff",
+  },
 });

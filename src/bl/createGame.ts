@@ -27,18 +27,18 @@ const game = [
       rank: "a",
       file: 1,
       playerA: {},
-      playerB: {}
-    }
-  ]
+      playerB: {},
+    },
+  ],
 ];
 
 enum PLAYER_ID {
   A = "A",
-  B = "B"
+  B = "B",
 }
 
 export default {
-  createGame
+  createGame,
 };
 
 function createCell(rankNum: number, fileNum: number) {
@@ -46,13 +46,13 @@ function createCell(rankNum: number, fileNum: number) {
     rank: String.fromCharCode(97 + rankNum - 1),
     file: fileNum,
     playerA: {},
-    playerB: {}
+    playerB: {},
   };
 }
 
 export function createGame(rankNum: number, fileNum: number) {
-  const ret = R.range(1, fileNum + 1).map(fileCursor => {
-    return R.range(1, rankNum + 1).map(rankCursor => {
+  const ret = R.range(1, fileNum + 1).map((fileCursor) => {
+    return R.range(1, rankNum + 1).map((rankCursor) => {
       return createCell(rankCursor, fileCursor);
     });
   });
