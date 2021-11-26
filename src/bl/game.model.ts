@@ -35,6 +35,6 @@ export const game = [
 ]
 
 export enum PLAYER_ID {
-   A = 'A',
-   B = 'B',
+   A = 0,
+   B = 1,
 }
