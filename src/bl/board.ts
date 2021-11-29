@@ -1,6 +1,6 @@
 import * as R from 'ramda'
 
-import { Cell, Board } from './game.model'
+import { Cell, Board, PLAYER_ID } from './game.model'
 
 function createCell(rankNum: number, fileNum: number): Cell {
    return {
@@ -31,6 +31,17 @@ export function createBoard(rankNum: number, fileNum: number): Board {
    })
 }
 
+export function drawBoard(board: Board, player: PLAYER_ID, field: string) {
+   return R.map((rnk) => {
+      return (
+         R.map((fl) => {
+            return fl.players[player][field] ? 'X' : '.'
+         }, rnk).join('') + '\n'
+      )
+   }, board).join('')
+}
+
 export default {
    createBoard,
+   drawBoard,
 }

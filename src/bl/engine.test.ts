@@ -1,8 +1,7 @@
-import { createSlice, configureStore } from '@reduxjs/toolkit'
+import { configureStore, createSlice } from '@reduxjs/toolkit'
 
-import { createBoard } from './createBoard'
-import { addShip as _addShip } from './addShip'
-import * as M from './game.model'
+import { createBoard } from './board'
+import { PLAYER_ID } from './game.model'
 
 const counterSlice = createSlice({
    name: 'counter',
@@ -11,36 +10,28 @@ const counterSlice = createSlice({
       board: createBoard(4, 4),
    },
    reducers: {
-      addShip: (state) => {
-         state.board[0][1].players[1].occupiedByMe = true
-      },
-      decremented: (state) => {
-         state.value -= 1
-      },
-      incremented: (state) => {
-         state.value += 1
+      addShip: (state, props) => {
+         const {
+            player,
+            position: { rank, file },
+         } = props.payload
+         state.board[rank][file].players[player].occupiedByMe = true
       },
    },
 })
 
-export const { incremented, decremented, addShip } = counterSlice.actions
+export const { addShip } = counterSlice.actions
 
 const store = configureStore({
    reducer: counterSlice.reducer,
 })
 
-// Can still subscribe to the store
-store.subscribe(() => console.log(JSON.stringify(store.getState(), null, 4)))
-
-// Still pass action objects to `dispatch`, but they're created for us
-// store.dispatch(incremented())
-// {value: 1}
-// store.dispatch(incremented())
-// {value: 2}
-// store.dispatch(decremented())
-// {value: 1}
+// store.subscribe(() => console.log(JSON.stringify(store.getState(), null, 4)))
 
 test('engine', () => {
-   // store.dispatch(decremented())
-   store.dispatch(addShip())
+   store.dispatch(
+      addShip({ player: PLAYER_ID.A, position: { rank: 1, file: 1 } })
+   )
+   let actual = store.getState().board[1][1].players[PLAYER_ID.A].occupiedByMe
+   expect(actual).toBe(true)
 })

@@ -1,5 +1,5 @@
 import { bombShip } from './bombShip'
-import { createBoard } from './createBoard'
+import { createBoard } from './board'
 import { PLAYER_ID, Result } from './game.model'
 import * as R from 'ramda'
 

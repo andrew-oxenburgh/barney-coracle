@@ -1,14 +1,7 @@
 import { addShip } from './addShip'
-import { createBoard } from './createBoard'
+import { createBoard } from './board'
 import { PLAYER_ID } from './game.model'
 import * as R from 'ramda'
-
-const emptyCell = {
-   occupiedByMe: false,
-   occupiedByThem: false,
-   bombedByMe: false,
-   bombedByThem: false,
-}
 
 describe('addShip', () => {
    test('1 x 1', () => {
