@@ -11,11 +11,12 @@
     "lint": "eslint",
     "prettier": "prettier src/**/*.* --write --ignore-unknown",
     "eject": "expo eject",
-     "postinstall": "husky install",
-     "prepublishOnly": "pinst --disable",
-     "postpublish": "pinst --enable"
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.6.2",
     "@types/jest": "^27.0.3",
     "expo": "~43.0.2",
     "expo-status-bar": "~1.1.0",
@@ -24,7 +25,8 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
-    "react-native-web": "0.17.1"
+    "react-native-web": "0.17.1",
+    "redux": "^4.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

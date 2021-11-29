@@ -1,11 +1,11 @@
 import { bombShip } from './bombShip'
-import { createGame } from './createGame'
+import { createBoard } from './createBoard'
 import { PLAYER_ID, Result } from './game.model'
 import * as R from 'ramda'
 
 describe('bombShip', () => {
    test('1 x 1', () => {
-      let inp = createGame(1, 1)
+      let inp = createBoard(1, 1)
       let expected = R.clone(inp)
 
       expected[0][0].players[0].bombedByMe = true
@@ -17,7 +17,7 @@ describe('bombShip', () => {
    })
 
    test('2 x 2', () => {
-      let inp = createGame(2, 2)
+      let inp = createBoard(2, 2)
 
       let expected = R.clone(inp)
       expected[0][0].players[0].bombedByMe = true

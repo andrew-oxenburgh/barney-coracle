@@ -23,7 +23,7 @@ function createCell(rankNum: number, fileNum: number): Cell {
    }
 }
 
-export function createGame(rankNum: number, fileNum: number): Board {
+export function createBoard(rankNum: number, fileNum: number): Board {
    return R.range(1, fileNum + 1).map((fileCursor) => {
       return R.range(1, rankNum + 1).map((rankCursor) => {
          return createCell(rankCursor, fileCursor)
@@ -32,5 +32,5 @@ export function createGame(rankNum: number, fileNum: number): Board {
 }
 
 export default {
-   createGame,
+   createBoard,
 }

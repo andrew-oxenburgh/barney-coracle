@@ -1,4 +1,4 @@
-import { createGame } from './createGame'
+import { createBoard } from './createBoard'
 
 const emptyCell = {
    occupiedByMe: false,
@@ -10,7 +10,7 @@ const emptyCell = {
 describe('createGame', () => {
    test('1 x 1', () => {
       let expected = [[{ rank: 1, file: 1, players: [emptyCell, emptyCell] }]]
-      let actual = createGame(1, 1)
+      let actual = createBoard(1, 1)
 
       expect(actual).toStrictEqual(expected)
    })
@@ -21,7 +21,7 @@ describe('createGame', () => {
             { rank: 2, file: 1, players: [emptyCell, emptyCell] },
          ],
       ]
-      let actual = createGame(2, 1)
+      let actual = createBoard(2, 1)
 
       expect(actual).toStrictEqual(expected)
    })
@@ -37,7 +37,7 @@ describe('createGame', () => {
             { rank: 2, file: 2, players: [emptyCell, emptyCell] },
          ],
       ]
-      let actual = createGame(2, 2)
+      let actual = createBoard(2, 2)
 
       expect(actual).toStrictEqual(expected)
    })
@@ -57,7 +57,7 @@ describe('createGame', () => {
             { rank: 2, file: 3, players: [emptyCell, emptyCell] },
          ],
       ]
-      let actual = createGame(2, 3)
+      let actual = createBoard(2, 3)
 
       expect(actual).toStrictEqual(expected)
    })
