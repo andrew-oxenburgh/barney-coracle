@@ -1,4 +1,4 @@
-# barney-corracle
+# barney-coracle
 
 ```bash
 yarn

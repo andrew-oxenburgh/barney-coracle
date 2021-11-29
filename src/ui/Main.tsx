@@ -29,7 +29,7 @@ export default function Main(): React.ReactElement<View> {
             translucent={true}
             hidden={false}
          />
-         <Text style={styles.button}>Barney Corracle</Text>
+         <Text style={styles.button}>Barney Coracle</Text>
          <BoardComponent>
             <RowComponent>
                <CellComponent>
