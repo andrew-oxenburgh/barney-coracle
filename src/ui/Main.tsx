@@ -10,6 +10,7 @@ import {
 import { CellComponent } from './CellComponent'
 import { RowComponent } from './RowComponent'
 import { BoardComponent } from './BoardComponent'
+import { Logo } from './Logo'
 
 export function Main(): React.ReactElement<View> {
    return (
@@ -21,6 +22,7 @@ export function Main(): React.ReactElement<View> {
             hidden={false}
          />
          <Text style={styles.button}>Barney Coracle</Text>
+         <Logo />
          <BoardComponent>
             <RowComponent>
                <CellComponent>
@@ -87,7 +89,4 @@ const styles = StyleSheet.create({
 
 export default {
    Main,
-   CellComponent,
-   RowComponent,
-   BoardComponent,
 }
