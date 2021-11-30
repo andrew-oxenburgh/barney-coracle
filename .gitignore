@@ -11,6 +11,7 @@ npm-debug.*
 web-build/
 .idea/
 yarn-error.log
+storybook-static
 
 # macOS
 .DS_Store

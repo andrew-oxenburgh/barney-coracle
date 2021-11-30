@@ -1,26 +1,11 @@
 import { StatusBar } from 'expo-status-bar'
 import React from 'react'
-import {
-   StyleSheet,
-   Text,
-   TouchableOpacity,
-   View,
-   SafeAreaView,
-} from 'react-native'
+import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { CellComponent } from './CellComponent'
+import { RowComponent } from './RowComponent'
+import { BoardComponent } from './BoardComponent'
 
-function BoardComponent({ children }): React.ReactElement<View> {
-   return <View style={styles.board}>{children}</View>
-}
-
-function RowComponent({ children }): React.ReactElement<View> {
-   return <View style={styles.row}>{children}</View>
-}
-
-function CellComponent({ children }): React.ReactElement<View> {
-   return <View style={styles.cell}>{children}</View>
-}
-
-export default function Main(): React.ReactElement<View> {
+export function Main(): React.ReactElement<View> {
    return (
       <SafeAreaView style={styles.container}>
          <StatusBar
@@ -77,49 +62,12 @@ export default function Main(): React.ReactElement<View> {
 }
 
 const styles = StyleSheet.create({
-   board: {
-      width: '100%',
-      display: 'flex',
-      flexWrap: 'nowrap',
-   },
-   row: {
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-      flexDirection: 'row',
-   },
-   cell: {
-      color: 'black',
-      fontFamily: 'sans-serif',
-      fontSize: 32,
-      fontWeight: 'bold',
-      backgroundColor: 'white',
-      alignItems: 'center',
-      height: 60,
-      width: 60,
-      justifyContent: 'center',
-      padding: 20,
-      margin: 5,
-      borderColor: 'red',
-      borderStyle: 'solid',
-      borderWidth: 2,
-   },
+
    container: {
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
       flex: 1,
-   },
-   logo: {
-      width: 305,
-      height: 159,
-      marginBottom: 20,
-   },
-   instructions: {
-      color: '#888',
-      fontSize: 18,
-      marginHorizontal: 15,
-      marginBottom: 10,
    },
    button: {
       backgroundColor: 'blue',
@@ -131,3 +79,10 @@ const styles = StyleSheet.create({
       color: '#fff',
    },
 })
+
+export default {
+   Main,
+   CellComponent,
+   RowComponent,
+   BoardComponent
+}
