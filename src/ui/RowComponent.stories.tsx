@@ -8,10 +8,11 @@ export default {
    component: RowComponent,
 } as ComponentMeta<typeof RowComponent>
 
-const Template: ComponentStory<typeof RowComponent> = (args) => <RowComponent {...args} />
+const Template: ComponentStory<typeof RowComponent> = (args) => (
+   <RowComponent {...args} />
+)
 
-export const RowComponentThing = Template.bind({
-})
+export const RowComponentThing = Template.bind({})
 RowComponentThing.args = {
-   title: 'thang'
+   title: 'thang',
 }

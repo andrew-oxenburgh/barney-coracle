@@ -1,6 +1,12 @@
 import { StatusBar } from 'expo-status-bar'
 import React from 'react'
-import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import {
+   SafeAreaView,
+   StyleSheet,
+   Text,
+   TouchableOpacity,
+   View,
+} from 'react-native'
 import { CellComponent } from './CellComponent'
 import { RowComponent } from './RowComponent'
 import { BoardComponent } from './BoardComponent'
@@ -62,7 +68,6 @@ export function Main(): React.ReactElement<View> {
 }
 
 const styles = StyleSheet.create({
-
    container: {
       backgroundColor: '#fff',
       alignItems: 'center',
@@ -84,5 +89,5 @@ export default {
    Main,
    CellComponent,
    RowComponent,
-   BoardComponent
+   BoardComponent,
 }
