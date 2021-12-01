@@ -1,5 +1,4 @@
 import { StatusBar } from 'expo-status-bar'
-import React from 'react'
 import {
    SafeAreaView,
    StyleSheet,
@@ -7,10 +6,10 @@ import {
    TouchableOpacity,
    View,
 } from 'react-native'
-import { CellComponent } from './CellComponent'
-import { RowComponent } from './RowComponent'
-import { BoardComponent } from './BoardComponent'
-import { Logo } from './Logo'
+import { CellComponent } from './components/CellComponent'
+import { RowComponent } from './components/RowComponent'
+import { BoardComponent } from './components/BoardComponent'
+import { Logo } from './components/Logo'
 
 export function Main(): React.ReactElement<View> {
    return (

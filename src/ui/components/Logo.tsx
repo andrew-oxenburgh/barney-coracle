@@ -1,6 +1,5 @@
 import { Image, StyleSheet } from 'react-native'
-import { battleship } from './images'
-import React from 'react'
+import { battleship } from '../images'
 
 export function Logo({ size = 4 }) {
    const logoSize = 300 / size
