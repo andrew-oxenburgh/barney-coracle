@@ -12,7 +12,8 @@ web-build/
 .idea/
 yarn-error.log
 storybook-static
-
+*.log
+.env
 # macOS
 .DS_Store
 

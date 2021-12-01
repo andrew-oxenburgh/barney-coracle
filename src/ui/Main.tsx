@@ -11,6 +11,10 @@ import { RowComponent } from './components/RowComponent'
 import { BoardComponent } from './components/BoardComponent'
 import { Logo } from './components/Logo'
 
+import { app } from './initFirebase'
+
+console.log('app.name = ' + app.name)
+
 export function Main(): React.ReactElement<View> {
    return (
       <SafeAreaView style={styles.container}>
